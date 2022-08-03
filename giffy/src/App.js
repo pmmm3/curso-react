@@ -1,7 +1,7 @@
 import React, {useEffect,useState} from 'react';
 import './App.css';
-import Gif from './components/Gif';
 import getGifs from './services/getGifs';
+import ListOfGifs from './components/ListOfGifs';
 
 
 
@@ -17,10 +17,7 @@ export default function App() {
   return (
     <div className='App'>
       <section className='App-content'>
-        {
-          gifs.map(({id,title,url}) => <Gif key={id} title={title} id={id} url={url}/>
-          )
-        }
+        <ListOfGifs gifs={gifs} />
       </section>
     </div>
   );
