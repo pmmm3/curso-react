@@ -1,8 +1,8 @@
-export default function getGifs(query) {
+export default function getGifs({keyword}) {
   const url =
-    'https://api.giphy.com/v1/gifs/search?api_key=sJOLgLE7uxHn9eRTpctrDj3T8HqpeJFz'+
+    'https://api.giphy.com/v1/gifs/search?api_key=sJOLgLE7uxHn9eRTpctrDj3T8HqpeJFz' +
     '&q=' +
-    query +
+    keyword +
     '&limit=10&offset=0&rating=g&lang=es';
   return fetch(url)
     .then(response => response.json())
